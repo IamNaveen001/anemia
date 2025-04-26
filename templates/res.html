@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <p><strong>Hemoglobin Level:</strong> {{ hb_level }}</p>
+    <p><strong>Status:</strong> <span style="color: {{ status_color }};">{{ status }}</span></p>
+
+    <h2>Segmented Eye Image</h2>
+    <img src="data:image/jpeg;base64,{{ uploaded_image }}" alt="Segmented Image">
+
+    <h2>RGB Intensity Chart</h2>
+    <img src="data:image/png;base64,{{ rgb_chart }}" alt="RGB Chart">
+</body>
+</html>

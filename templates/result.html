@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hemoglobin Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .left, .right {
+            width: 48%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            color: #007bff;
+        }
+        img {
+            width: 90%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .result {
+            font-size: 18px;
+        }
+        .status {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left side (uploaded image) -->
+        <div class="left">
+            <h2>Uploaded Image</h2>
+            <img src="data:image/jpeg;base64,{{ uploaded_image }}" alt="Uploaded Image">
+        </div>
+
+        <!-- Right side (results) -->
+        <div class="right">
+            <h2>Prediction Result</h2>
+            <p><strong>Hemoglobin Level:</strong> {{ hb_level }}</p>
+            <p class="status" style="color: {{ status_color }};"><strong>Status:</strong> {{ status }}</p>
+            <br>
+            <a href="/">Go Back</a>
+        </div>
+    </div>
+
+</body>
+</html>
