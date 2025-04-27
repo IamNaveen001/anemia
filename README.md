@@ -1,4 +1,4 @@
-# 🩸 Anemia Prediction from Eye Images
+#  Anemia Prediction from Eye Images
 
 A Flask web application that predicts **anemia** using **machine learning** by analyzing eye images uploaded by users. The model is trained to detect signs of low hemoglobin levels based on visual cues in the eye region.
 
